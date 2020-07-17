@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.2.8.RELEASE</version>
+    <relativePath/>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.movie</groupId>
+  <artifactId>movie-parent</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+  <name>Movie Catalog Parent</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <java.version>1.8</java.version>
+    
+    <movie.domain.version>1.0.0</movie.domain.version>
+    <movie.service.version>1.0.0</movie.service.version>
+    <movie.app.version>1.0.0</movie.app.version>
+
+    <lombok.version>1.18.12</lombok.version>
+  </properties>
+
+  <modules>
+    <module>movie-app</module>
+    <module>movie-domain</module>
+    <module>movie-service</module>
+  </modules>
+
+  <dependencyManagement>
+    <dependencies>
+    
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>${lombok.version}</version>
+        <optional>true</optional>
+      </dependency>
+
+      <dependency>
+        <groupId>com.movie</groupId>
+        <artifactId>movie-domain</artifactId>
+        <version>${movie.domain.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.movie</groupId>
+        <artifactId>movie-service</artifactId>
+        <version>${movie.service.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.movie</groupId>
+        <artifactId>movie-app</artifactId>
+        <version>${movie.app.version}</version>
+      </dependency>
+
+    </dependencies>
+  </dependencyManagement>
+
+</project>
