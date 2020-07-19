@@ -15,7 +15,7 @@
   <name>Movie Catalog Web Application</name>
   
   <properties>
-    <start-class>ccom.movie.Application</start-class>
+    <start-class>com.movie.Application</start-class>
     <final.name>movie-catalog</final.name>
   </properties>
 

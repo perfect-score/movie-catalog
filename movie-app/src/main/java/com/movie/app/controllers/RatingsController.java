@@ -24,7 +24,7 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping("/rating")
 public class RatingsController {
 
-   private MovieRatingSaveService movieRatingSaveService;
+   private final MovieRatingSaveService movieRatingSaveService;
 
    @Autowired
    public RatingsController(MovieRatingSaveService movieRatingSaveService) {
