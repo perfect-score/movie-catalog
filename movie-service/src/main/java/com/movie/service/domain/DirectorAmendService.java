@@ -33,10 +33,7 @@ public class DirectorAmendService implements AmendService<Director> {
    public void save(Director entity) {
       try {
          Director savedEntity = repository.save(entity);
-
-         if (log.isDebugEnabled()) {
-            log.debug("Director saved [{}]", savedEntity.toString());
-         }
+         log.debug("Director saved [{}]", savedEntity.toString());
       } catch (RuntimeException e) {
          log.error("Director save error {}", e);
          throw (e);
@@ -78,10 +75,7 @@ public class DirectorAmendService implements AmendService<Director> {
    public void delete(int id) {
       try {
          repository.deleteById(id);
-
-         if (log.isDebugEnabled()) {
-            log.debug("Director deleted [{}]", id);
-         }
+         log.debug("Director deleted [{}]", id);
       } catch (RuntimeException e) {
          log.error("Director delete error {}", e);
          throw (e);

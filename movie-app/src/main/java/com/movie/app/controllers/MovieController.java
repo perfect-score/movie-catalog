@@ -66,8 +66,6 @@ public class MovieController {
 
       RestResponse restResponse;
 
-      log.info("Movie update [{}]", movie.toString());
-
       try {
          movieAmendService.update(movie.getId(), movie.getName(), movie.getDescription(),
                movie.getDirectorId(), movie.getMovieRatingId());

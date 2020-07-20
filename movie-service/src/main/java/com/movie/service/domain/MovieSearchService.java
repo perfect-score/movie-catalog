@@ -37,10 +37,8 @@ public class MovieSearchService {
 
       List<MovieDetail> list = repository.findByDirectorName(directorName);
 
-      if (log.isDebugEnabled()) {
-         for (MovieDetail l : list) {
-            log.debug("MovieDetail collection director search [{}]", l.toString());
-         }
+      for (MovieDetail l : list) {
+         log.debug("MovieDetail collection director search [{}]", l.toString());
       }
 
       return list;
@@ -56,10 +54,8 @@ public class MovieSearchService {
 
       List<MovieDetail> list = repository.findByMovieRatingGreaterThan(movieRating);
 
-      if (log.isDebugEnabled()) {
-         for (MovieDetail l : list) {
-            log.debug("MovieDetail collection rating search [{}]", l.toString());
-         }
+      for (MovieDetail l : list) {
+         log.debug("MovieDetail collection rating search [{}]", l.toString());
       }
 
       return list;

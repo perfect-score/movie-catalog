@@ -33,10 +33,7 @@ public class MovieAmendService implements AmendService<Movie> {
    public void save(Movie entity) {
       try {
          Movie savedEntity = repository.save(entity);
-
-         if (log.isDebugEnabled()) {
-            log.debug("Movie saved [{}]", savedEntity.toString());
-         }
+         log.debug("Movie saved [{}]", savedEntity.toString());
       } catch (RuntimeException e) {
          log.error("Movie save error {}", e);
          throw (e);
@@ -93,10 +90,7 @@ public class MovieAmendService implements AmendService<Movie> {
    public void delete(int id) {
       try {
          repository.deleteById(id);
-
-         if (log.isDebugEnabled()) {
-            log.debug("Movie deleted [{}]", id);
-         }
+         log.debug("Movie deleted [{}]", id);
       } catch (RuntimeException e) {
          log.error("Movie delete error {}", e);
          throw (e);

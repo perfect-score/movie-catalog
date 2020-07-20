@@ -26,11 +26,8 @@ public class MovieRatingSaveService {
    public void saveMovieRating(int id, int movieRatingId) {
       try {
          int count = repository.updateMovieRating(id, movieRatingId);
-
-         if (log.isDebugEnabled()) {
-            log.debug("Movie rating saved [id={}] [movieRatingId={}] [updatedCount={}]", id,
-                  movieRatingId, count);
-         }
+         log.debug("Movie rating saved [id={}] [movieRatingId={}] [updatedCount={}]", id,
+               movieRatingId, count);
       } catch (RuntimeException e) {
          log.error("Movie rating save error {}", e);
          throw (e);

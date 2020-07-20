@@ -93,7 +93,7 @@ public class DirectorController {
       try {
          directorAmendService.delete(directorId);
          restResponse = new RestResponse(true, directorId);
-         log.info("Movie ratings delete [directorId={}]", directorId);
+         log.info("Director ratings delete [directorId={}]", directorId);
       } catch (RuntimeException e) {
          log.error("Dirctor delete error [directorId={}]", directorId, e);
          restResponse = new RestResponse(false, directorId);

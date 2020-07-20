@@ -44,12 +44,10 @@ public class MovieSearchController {
 
       List<MovieDetail> movies = movieSearchService.searchByDirectorName(directorName);
 
-      if (log.isTraceEnabled()) {
-         log.trace("Search by director name [directorName={}]", directorName);
+      log.trace("Search by director name [directorName={}]", directorName);
 
-         for (MovieDetail md : movies) {
-            log.trace("Movie search by director [{}]", md.toString());
-         }
+      for (MovieDetail md : movies) {
+         log.trace("Movie search by director [{}]", md.toString());
       }
 
       return movies;
@@ -68,12 +66,10 @@ public class MovieSearchController {
 
       List<MovieDetail> movies = movieSearchService.searchByMovieRating(rating);
 
-      if (log.isTraceEnabled()) {
-         log.trace("Search by movie rating [rating={}]", rating);
+      log.trace("Search by movie rating [rating={}]", rating);
 
-         for (MovieDetail md : movies) {
-            log.trace("Movie search by rating [{}]", md.toString());
-         }
+      for (MovieDetail md : movies) {
+         log.trace("Movie search by rating [{}]", md.toString());
       }
 
       return movies;
